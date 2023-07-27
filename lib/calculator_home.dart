@@ -16,41 +16,52 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isPressed = false;
   @override
   Widget build(BuildContext context) {
-    print('Hello');
     return Scaffold(
       body: Column(
         children: [
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(
-                bottom: 100,
+              padding: const EdgeInsets.all(
+                10,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        userinput.toString(),
-                        style:
-                            const TextStyle(fontSize: 45, color: Colors.black),
+                  Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Colors.grey),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: Text(
+                          userinput.toString(),
+                          style: const TextStyle(
+                              fontSize: 45, color: Colors.black),
+                        ),
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        answer.toString(),
-                        style:
-                            const TextStyle(fontSize: 45, color: Colors.black),
+                  // const SizedBox(
+                  //   height: 10,
+                  // ),
+                  Container(
+                    height: 80,
+                    decoration: BoxDecoration(
+                        border:
+                            Border.all(width: 1, color: Colors.grey.shade600)),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          answer.toString(),
+                          style: const TextStyle(
+                              fontSize: 45, color: Colors.black),
+                        ),
                       ),
                     ),
                   )
